@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+   <title>Bootstrap 实例 - 警告框（Alert）插件</title>
+   <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">
+      &times;
+   </a>
+   <strong>警告！</strong>您的网络连接有问题。
+</div>
+
+
+<h3>警告框（Alert）插件 alert() 方法</h3>
+<div id="myAlert" class="alert alert-success">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>成功！</strong>结果是成功的。
+</div>
+<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>警告！</strong>您的网络连接有问题。
+</div>
+
+<script type="text/javascript">
+$(function(){
+   $(".close").click(function(){
+      $("#myAlert").alert();
+   });
+});  
+</script> 
+
+<h3>警告框（Alert）插件 alert('close') 方法</h3>
+<div id="myAlert" class="alert alert-success">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>成功！</strong>结果是成功的。
+</div>
+<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>警告！</strong>您的网络连接有问题。
+</div>
+
+<script type="text/javascript">
+$(function(){
+   $(".close").click(function(){
+      $("#myAlert").alert('close');
+   });
+});  
+
+</script>   
+
+
+<div id="myAlert" class="alert alert-success">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>成功！</strong>结果是成功的。
+</div>
+
+<script type="text/javascript">
+$(function(){
+   $("#myAlert").bind('closed.bs.alert', function () {
+      alert("警告消息框被关闭。");
+   });
+});
+</script>  
+</body>
+</html>
+			
